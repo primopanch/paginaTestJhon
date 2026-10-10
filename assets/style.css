@@ -1,0 +1,57 @@
+body {
+	background-color: rgb(198, 195, 195);
+	color: rgb(65, 1, 1);
+	margin: 0;
+	padding: 20px;
+}
+
+#enlaces {
+	border-top: 6px solid rgb(55, 55, 55);
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.fondo-azul {
+	background-color: lightblue;
+	border: 8px solid red;
+	border-radius: 18px;
+	padding: 14px;
+	margin: 20px 0;
+}
+
+.fondo-gris {
+	background-color: lightgray;
+	border: 8px solid red;
+	border-radius: 18px;
+	padding: 14px;
+	margin: 20px 0;
+}
+
+#enlaces a:hover {
+	background-color: rgb(65, 1, 1);
+	color: white;
+	text-decoration: underline;
+}
+
+.parrafo-interactivo:hover {
+	color: darkblue;
+}
+
+ul {
+	padding: 0 25px;
+	margin: 20px 0;
+}
+
+ul li {
+	padding: 4px;
+}
+
+ul li:first-child {
+	font-weight: bold;
+	background-color: yellow;
+}
+
+ul li:last-child {
+	background-color: black;
+	color: white;
+}
