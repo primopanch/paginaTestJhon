@@ -9,7 +9,7 @@ body {
 	background-color: rgb(45, 45, 45);
 	background-image: url("img/portfolio/dog-colgate.png");
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
 	color: white;
 	min-height: 220px;
@@ -28,6 +28,64 @@ body {
 	font-size: 1.15rem;
 	line-height: 1.5;
 	padding: 20px;
+}
+
+.layout-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(5, minmax(64px, auto));
+	grid-template-areas:
+		"one one one"
+		"two two three"
+		"four five three"
+		"six seven three"
+		"eight eight eight";
+	gap: 12px;
+	background-color: #168cf0;
+	padding: 12px;
+	margin: 20px 0;
+}
+
+.grid-item {
+	display: grid;
+	place-items: center;
+	min-height: 64px;
+	border: 2px solid #222;
+	background-color: #f1f1f1;
+	color: #111;
+	font-size: 2rem;
+}
+
+.item-1 {
+	grid-area: one;
+}
+
+.item-2 {
+	grid-area: two;
+}
+
+.item-3 {
+	grid-area: three;
+}
+
+.item-4 {
+	grid-area: four;
+}
+
+.item-5 {
+	grid-area: five;
+}
+
+.item-6 {
+	grid-area: six;
+}
+
+.item-7 {
+	grid-area: seven;
+}
+
+.item-8 {
+	grid-area: eight;
 }
 
 #enlaces {
@@ -79,4 +137,20 @@ ul li:first-child {
 ul li:last-child {
 	background-color: black;
 	color: white;
+}
+
+@media (max-width: 700px) {
+	.layout-grid {
+		grid-template-columns: 1fr;
+		grid-template-rows: none;
+		grid-template-areas:
+			"one"
+			"two"
+			"three"
+			"four"
+			"five"
+			"six"
+			"seven"
+			"eight";
+	}
 }
